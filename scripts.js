@@ -1,10 +1,10 @@
-let itens = [], precoItens = [];
+const itens = [], precoItens = [];
 
 function finalizarPedido(){
-    let precoTotal = precoItens.reduce((a, b) => {
+    const precoTotal = precoItens.reduce((a, b) => {
         return a + b;
       });
-    let mensagem = "Olá, gostaria de fazer o pedido:" + "\n" + 
+    const mensagem = "Olá, gostaria de fazer o pedido:" + "\n" +
     "- Prato: " + itens[0] + "\n" +
     "- Bebida: " + itens[1] + "\n" +
     "- Sobremesa: " + itens[2] + "\n" +
@@ -30,15 +30,15 @@ function selecionandoItens(tipoRefeicao,objetoSelecionado){
 
     if (tipoRefeicao === '.prato'){
         itens[0] = document.querySelector('.prato.selecionado p').innerHTML;
-        let precoTexto = document.querySelector('.prato.selecionado p:nth-of-type(3)').innerHTML;
+        const precoTexto = document.querySelector('.prato.selecionado p:nth-of-type(3)').innerHTML;
         precoItens[0] = transformarPrecoDecimal(precoTexto);
     }else if (tipoRefeicao === '.bebida'){
         itens[1] = document.querySelector('.bebida.selecionado p').innerHTML;
-        let precoTexto = document.querySelector('.bebida.selecionado p:nth-of-type(3)').innerHTML;
+        const precoTexto = document.querySelector('.bebida.selecionado p:nth-of-type(3)').innerHTML;
         precoItens[1] = transformarPrecoDecimal(precoTexto);
     }else{
         itens[2] = document.querySelector('.sobremesa.selecionado p').innerHTML;
-        let precoTexto = document.querySelector('.sobremesa.selecionado p:nth-of-type(3)').innerHTML;
+        const precoTexto = document.querySelector('.sobremesa.selecionado p:nth-of-type(3)').innerHTML;
         precoItens[2] = transformarPrecoDecimal(precoTexto);
     }
 
@@ -48,8 +48,8 @@ function selecionandoItens(tipoRefeicao,objetoSelecionado){
         botaoPedido.addEventListener("click", finalizarPedido);
         botaoPedido.style.backgroundColor = "#32B72F";
         botaoPedido.disabled = false;
-        let textoBotao = document.querySelector('.fechamento-pedido p');
+        const textoBotao = document.querySelector('.fechamento-pedido p');
         textoBotao.style.fontWeight = "700";
-        textoBotao.innerHTML = "Fechar Pedido"
+        textoBotao.innerHTML = "Fechar Pedido";
     }
 }
