@@ -291,9 +291,10 @@ body {
     left: 0;
 }
 
-.fechamento-pedido div{
+.fechamento-pedido button{
     width: 364px;
     height: 61px;
+    border: none;
     background-color: #CBCBCB;
     border-radius: 50px;
 }

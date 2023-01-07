@@ -44,9 +44,10 @@ function selecionandoItens(tipoRefeicao,objetoSelecionado){
 
     const qtdSelecoes = document.querySelectorAll('.selecionado');
     if (qtdSelecoes.length === 3){
-        const botaoPedido = document.querySelector('.fechamento-pedido');
+        const botaoPedido = document.querySelector('.fechamento-pedido button');
         botaoPedido.addEventListener("click", finalizarPedido);
-        document.querySelector('.fechamento-pedido div').style.backgroundColor = "#32B72F";
+        botaoPedido.style.backgroundColor = "#32B72F";
+        botaoPedido.disabled = false;
         let textoBotao = document.querySelector('.fechamento-pedido p');
         textoBotao.style.fontWeight = "700";
         textoBotao.innerHTML = "Fechar Pedido"
