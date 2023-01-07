@@ -4,11 +4,15 @@ function finalizarPedido(){
     const precoTotal = precoItens.reduce((a, b) => {
         return a + b;
       });
+    const nome = prompt("Digite seu nome: ");
+    const endereco = prompt("Digite o seu endereço: ");
     const mensagem = "Olá, gostaria de fazer o pedido:" + "\n" +
     "- Prato: " + itens[0] + "\n" +
     "- Bebida: " + itens[1] + "\n" +
     "- Sobremesa: " + itens[2] + "\n" +
-    "Total: R$ " + precoTotal.toFixed(2);
+    "Total: R$ " + precoTotal.toFixed(2) + "\n\n" +
+    "Nome: " + nome + "\n" +
+    "Endereço: " + endereco;
 
     window.open("https://wa.me/5521979065971?text=" + encodeURIComponent(mensagem));
 }
