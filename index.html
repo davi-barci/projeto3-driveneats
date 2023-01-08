@@ -17,6 +17,32 @@
 </head>
 
 <body>
+    <div class="container-confirmar-pedido">
+        <div class="tela-confirmar-pedido" data-test="confirm-order-modal">
+            <p>Confirme seu pedido</p>
+            <div class="confirmar-item">
+                <p>Prato</p>
+                <p>00,00</p>
+            </div>
+            <div class="confirmar-item">
+                <p>Bebida</p>
+                <p>00,00</p>
+            </div>
+            <div class="confirmar-item">
+                <p>Sobremesa</p>
+                <p>00,00</p>
+            </div>
+            <div class="confirmar-item">
+                <p style="font-weight: 700;">TOTAL</p>
+                <p style="font-weight: 700;">00,00</p>
+            </div>
+            <button onclick="finalizarPedido();" data-test="confirm-order-btn">
+                <p>Tudo certo, pode pedir!</p>
+            </button>
+            <p class="texto-cancelar" onclick="cancelarPedido();" data-test="cancel-order-btn">Cancelar</p>
+        </div>
+    </div>
+
     <div class="topo">
         <p class="nome">DrivenEats</p>
         <p class="slogan">Sua comida em 6 minutos</p>

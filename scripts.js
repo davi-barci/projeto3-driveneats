@@ -1,5 +1,25 @@
 const itens = [], precoItens = [];
 
+function confirmarPedido(){
+    const telaConfirmaPedido = document.querySelector('.container-confirmar-pedido');
+    const confirmaItens = document.querySelectorAll('.confirmar-item p:nth-of-type(1)');
+    const precoConfirmaItens = document.querySelectorAll('.confirmar-item p:nth-of-type(2)');
+    for (let i = 0; i < 3; i++){
+        confirmaItens[i].innerHTML = itens[i];
+        precoConfirmaItens[i].innerHTML = precoItens[i].toFixed(2).replace('.',',');
+    }
+    const precoTotal = precoItens.reduce((a, b) => {
+        return a + b;
+      });
+    precoConfirmaItens[3].innerHTML = precoTotal.toFixed(2).replace('.',',');
+    telaConfirmaPedido.classList.add('visible');
+}
+
+function cancelarPedido(){
+    const telaConfirmaPedido = document.querySelector('.container-confirmar-pedido');
+    telaConfirmaPedido.classList.remove('visible');
+}
+
 function finalizarPedido(){
     const precoTotal = precoItens.reduce((a, b) => {
         return a + b;
@@ -49,7 +69,7 @@ function selecionandoItens(tipoRefeicao,objetoSelecionado){
     const qtdSelecoes = document.querySelectorAll('.selecionado');
     if (qtdSelecoes.length === 3){
         const botaoPedido = document.querySelector('.fechamento-pedido button');
-        botaoPedido.addEventListener("click", finalizarPedido);
+        botaoPedido.addEventListener("click", confirmarPedido);
         botaoPedido.style.backgroundColor = "#32B72F";
         botaoPedido.disabled = false;
         const textoBotao = document.querySelector('.fechamento-pedido p');
