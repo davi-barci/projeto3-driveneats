@@ -69,6 +69,19 @@ body {
     color: #FFFFFF;
 }
 
+.tela-confirmar-pedido>button>p{
+    width: 333px;
+    height: 52px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.018em;
+    color: #50D074;
+}
+
 .conteudo>p:nth-of-type(1) {
     padding-top: 31px;
 }
@@ -410,19 +423,6 @@ body {
     background-color: #FFFFFF;
     border-radius: 100px;
     border: none;
-}
-
-.tela-confirmar-pedido>button>p{
-    width: 333px;
-    height: 52px;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 0.018em;
-    color: #50D074;
 }
 
 .texto-cancelar{
